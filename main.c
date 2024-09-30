@@ -132,6 +132,60 @@ int main() {
                 printf("bilangan prima.\n");
             }
 
+        case 7:
+            int u;
+            printf("Masukkan u: ");
+            scanf("%d", &u);
+
+            for(int r = 1; r <= u; r++) {
+                for(int b = 1; b <= r; b++) {
+                    printf("%d", r);
+                }
+                printf("\n");
+            }
+            break;
+        case 8: 
+            printf("Program bilangan ganjil\n");
+
+            int ganjil;
+            printf("Mau berapa angka: ");
+            scanf("%d", &ganjil);
+
+            for(int t = 1; t <= ganjil; t++) {
+                if(t % 2 == 0) {
+                    continue;
+                } else {
+                    printf("%d ", t);
+                }
+            }
+            break;
+        case 9: 
+            int e, nums, max, nums_min;
+
+            printf("Masukkan e: ");
+            scanf("%d", &e);
+
+            printf("Masukkan bilangan ke 1: ");
+            scanf("%d", &nums);
+
+            max = nums;
+            nums_min = nums;
+            for(int o = 2; o <= e; o++) {
+                printf("Masukkan bilangan ke %d: ", o);
+                scanf("%d", &nums);
+
+                if(nums < nums_min) {
+                    nums_min = nums;
+                }
+
+                if(nums > max) {
+                    max = nums;
+                }
+            }
+            printf("Bilangan terkecil: %d\n", nums_min);
+            printf("Bilangan terbesar: %d", max);
+            break;
+            
         default:
             printf("Belum Tersedia!");
             break;

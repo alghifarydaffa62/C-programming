@@ -185,7 +185,39 @@ int main() {
             printf("Bilangan terkecil: %d\n", nums_min);
             printf("Bilangan terbesar: %d", max);
             break;
-            
+        case 10:
+            int g, space;
+            printf("Masukkan tinggi segitiga: ");
+            scanf("%d", &g);
+
+            for (int c = 1; c <= g; c++) {
+                // Mencetak spasi
+                for (space = 1; space <= g - c; space++) {
+                    printf("  ");
+                }
+                // Mencetak bintang
+                for (int v = 1; v <= 2 * c - 1; v++) {
+                    printf("* ");
+                }
+                printf("\n");
+            }
+            break;
+        case 11:
+            int d = 1, jumlah = 0, bil;
+            char choice;
+
+            do {
+                printf("Masukkan bilangan ke %d: ", d);
+                scanf("%d", &bil);
+                jumlah += bil;
+                d++;
+
+                printf("Mau lagi ? (y/t): ");
+                scanf(" %c", &choice);
+                
+            } while(choice == 'y' || choice == 'Y');
+            printf("Total: %d", jumlah);
+            break;
         default:
             printf("Belum Tersedia!");
             break;
